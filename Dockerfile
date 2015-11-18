@@ -3,7 +3,7 @@ MAINTAINER Frank Stolle "frank@stolle.email"
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
 	DEBIAN_FRONTEND=noninteractive apt-get upgrade -y && \
-	DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates apache2-mpm-worker apache2-suexec php5-cgi php5-mysql php5-gd libapache2-mod-fcgid locales && \
+	DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates apache2-mpm-worker apache2-suexec php5-cgi php5-curl php5-idn php5-imap php5-intl php5-xdebug php5-mysql php5-gd libapache2-mod-fcgid locales && \
 	rm -r /var/lib/apt/lists/*
 
 #Zeitzonen-Config
