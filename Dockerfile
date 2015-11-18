@@ -33,6 +33,8 @@ RUN a2enmod suexec
 ADD ./001-site.conf /etc/apache2/sites-available/
 RUN ln -s /etc/apache2/sites-available/001-site.conf /etc/apache2/sites-enabled/
 
+ADD ./xdebug.ini /etc/php5/cgi/conf.d/90-xdebug.ini
+
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
 ENV APACHE_LOG_DIR /var/log/apache2
